@@ -1,0 +1,71 @@
+# ~/.config/wm/wmrc
+# Separator is either ':' or a space — both work
+# Reload live with mod_key+Shift+r
+
+# ── modifier key ──────────────────────────────────────────
+# Options: super (Win key), alt, ctrl, shift
+mod_key : alt 
+
+# ── spawn targets ─────────────────────────────────────────
+terminal : alacritty
+launcher : rofi -show drun
+
+# ── appearance ────────────────────────────────────────────
+border_px       : 3
+outer_border_px : 5 
+gap          : 13 
+master_pct   : 55
+color_focus  : ffffff 
+color_normal : 282828 
+color_outer  : 444444 
+
+# ── keybindings ───────────────────────────────────────────
+# Syntax:  bind : <mods> <key> <action> [arg]
+# MOD is whatever mod_key is set to above
+# Additional mods: SHIFT, CTRL, ALT
+
+# launch
+bind : MOD Return   terminal
+bind : MOD p        launcher
+bind : MOD b  spawn firefox
+
+
+#floating
+bind : MOD f        togglefloat
+bind : MOD SHIFT f  snapback
+
+# focus
+bind : MOD j   focusnext
+bind : MOD k   focusprev
+
+# master area
+bind : MOD h   incmaster -5
+bind : MOD l   incmaster +5
+bind : MOD z   zoom
+
+# window management
+bind : MOD q        killclient
+bind : MOD SHIFT r  reloadconfig
+bind : MOD SHIFT q  quit
+
+# tags 1–9
+bind : MOD 1   viewtag 1
+bind : MOD 2   viewtag 2
+bind : MOD 3   viewtag 4
+bind : MOD 4   viewtag 8
+bind : MOD 5   viewtag 16
+bind : MOD 6   viewtag 32
+bind : MOD 7   viewtag 64
+bind : MOD 8   viewtag 128
+bind : MOD 9   viewtag 256
+
+# move window to tag
+bind : MOD SHIFT 1   movetotag 1
+bind : MOD SHIFT 2   movetotag 2
+bind : MOD SHIFT 3   movetotag 4
+bind : MOD SHIFT 4   movetotag 8
+bind : MOD SHIFT 5   movetotag 16
+bind : MOD SHIFT 6   movetotag 32
+bind : MOD SHIFT 7   movetotag 64
+bind : MOD SHIFT 8   movetotag 128
+bind : MOD SHIFT 9   movetotag 256
