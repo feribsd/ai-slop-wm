@@ -20,16 +20,6 @@ xbps-install -S libxcb-devel xcb-util-keysyms-devel libX11-devel
 apt install libxcb1-dev libxcb-keysyms1-dev libx11-dev
 ```
 
-## Build & Install
-
-```sh
-git clone github.com/feribsd/ai-slop-wm.git
-cd hyprnichewm
-make
-sudo make install   # installs to /usr/local/bin/wm
-```
-
-
 ```
 
 ## Configuration(resembles dwm)
